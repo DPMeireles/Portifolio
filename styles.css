@@ -5,10 +5,40 @@
   box-sizing: border-box;
 }
 
+/* Variáveis para tema claro e escuro */
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #222;
+  --header-bg: #333;
+  --header-text: #fff;
+  --section-bg: #fff;
+  --project-card-bg: #e1e1e1;
+  --link-color: #007bff;
+  --btn-bg: #007bff;
+  --btn-text: #fff;
+  --footer-bg: #333;
+  --footer-text: #fff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --header-bg: #1f1f1f;
+  --header-text: #eee;
+  --section-bg: #222;
+  --project-card-bg: #333;
+  --link-color: #66b2ff;
+  --btn-bg: #66b2ff;
+  --btn-text: #121212;
+  --footer-bg: #1f1f1f;
+  --footer-text: #eee;
+}
+
 /* Configurações gerais */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 /* Container padrão */
@@ -21,8 +51,8 @@ body {
 
 /* Header */
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--header-bg);
+  color: var(--header-text);
   padding: 20px 0;
 }
 
@@ -42,37 +72,35 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: var(--header-text);
   text-decoration: none;
   font-size: 1.2rem;
 }
 
 /* Seções */
 section {
-  padding: 60px 0; /* Espaçamento superior e inferior */
-  background-color: #fff;
-<<<<<<< HEAD
+  padding: 60px 0;
+  background-color: var(--section-bg);
+  color: var(--text-color);
   text-align: center;
-=======
-  text-align: center; /* Centraliza o conteúdo da seção */
->>>>>>> 7582e54510095c95053fe3c359fa1e6b1f99046a
 }
 
+/* Específico para a seção SOBRE para garantir aplicação */
+section#sobre {
+  background-color: var(--section-bg);
+  color: var(--text-color);
+}
+
+/* Corrige seções com bg-light do Bootstrap para respeitarem o tema */
+section.bg-light {
+  background-color: var(--section-bg) !important;
+  color: var(--text-color) !important;
+}
+
+/* Títulos das seções */
 section h2 {
   font-size: 2rem;
-<<<<<<< HEAD
   margin-bottom: 40px;
-=======
-  margin-bottom: 40px; /* Aumenta a margem inferior para afastar do conteúdo abaixo */
-}
-
-.container {
-  display: flex; /* Usar flexbox para o contêiner */
-  flex-wrap: wrap; /* Permitir que os cartões se movam para a próxima linha */
-  justify-content: center; /* Centralizar os cartões horizontalmente */
-  width: 100%; /* Garantir que o contêiner ocupe toda a largura */
-  padding: 0 20px; /* Adiciona um pouco de padding lateral ao contêiner */
->>>>>>> 7582e54510095c95053fe3c359fa1e6b1f99046a
 }
 
 /* Wrapper apenas para os projetos */
@@ -85,94 +113,46 @@ section h2 {
 
 /* Cartões de projeto */
 .project-card {
-<<<<<<< HEAD
-=======
-  display: flex; /* Usar flexbox para o cartão */
-  flex-direction: column; /* Alinhar os itens em coluna */
-  align-items: center; /* Centralizar o conteúdo do cartão */
-  width: 300px; /* Definir uma largura fixa para os cartões */
-  margin: 20px; /* Espaçamento entre os cartões */
->>>>>>> 7582e54510095c95053fe3c359fa1e6b1f99046a
-  background-color: #e1e1e1;
+  background-color: var(--project-card-bg);
   width: 300px;
   padding: 20px;
   border-radius: 10px;
-<<<<<<< HEAD
-=======
-}
-
-.project-card img {
-  width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
-  height: auto; /* Mantém a proporção da imagem */
-  max-height: 220px; /* Define uma altura máxima */
-  object-fit: contain; /* Ajusta a imagem para caber no contêiner sem cortar */
-  border-radius: 10px; /* Mantém o arredondamento dos cantos */
-}
-
-.project-card h3 {
-  margin-top: 10px;
-  font-size: 1.5rem;
-}
-
-.project-card p {
-  margin: 10px 0;
-}
-
-.project-card a {
-  color: #007BFF;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-form label {
-  display: block;
-  margin-top: 10px;
-  font-size: 1rem;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  margin-top: 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-form button:hover {
-  background-color: #0056b3;
-}
-
-footer {
-  background-color: #1a1a1a; /* Cor de fundo preto mais fosco */
-  color: #fff; /* Cor do texto em branco */
->>>>>>> 7582e54510095c95053fe3c359fa1e6b1f99046a
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--text-color);
 }
 
-<<<<<<< HEAD
-.project-card
-=======
+/* Links e botões */
+a {
+  color: var(--link-color);
+}
+
+.btn-primary {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 20px 0;
+  text-align: center;
+}
+
 footer a {
-  color: #fff; /* Cor dos links em branco */
-  text-decoration: none; /* Remove o sublinhado dos links */
-  margin: 0 10px; /* Espaçamento entre os ícones */
+  color: var(--footer-text);
+  text-decoration: none;
+  margin: 0 10px;
 }
 
 footer a:hover {
-  color: #f0f0f0; /* Cor dos links ao passar o mouse */
+  opacity: 0.8;
 }
->>>>>>> 7582e54510095c95053fe3c359fa1e6b1f99046a
