@@ -49,14 +49,30 @@ nav ul li a {
 
 /* Seções */
 section {
-  padding: 60px 0;
+  padding: 60px 0; /* Espaçamento superior e inferior */
   background-color: #fff;
+<<<<<<< HEAD
   text-align: center;
+=======
+  text-align: center; /* Centraliza o conteúdo da seção */
+>>>>>>> 7582e54510095c95053fe3c359fa1e6b1f99046a
 }
 
 section h2 {
   font-size: 2rem;
+<<<<<<< HEAD
   margin-bottom: 40px;
+=======
+  margin-bottom: 40px; /* Aumenta a margem inferior para afastar do conteúdo abaixo */
+}
+
+.container {
+  display: flex; /* Usar flexbox para o contêiner */
+  flex-wrap: wrap; /* Permitir que os cartões se movam para a próxima linha */
+  justify-content: center; /* Centralizar os cartões horizontalmente */
+  width: 100%; /* Garantir que o contêiner ocupe toda a largura */
+  padding: 0 20px; /* Adiciona um pouco de padding lateral ao contêiner */
+>>>>>>> 7582e54510095c95053fe3c359fa1e6b1f99046a
 }
 
 /* Wrapper apenas para os projetos */
@@ -69,14 +85,94 @@ section h2 {
 
 /* Cartões de projeto */
 .project-card {
+<<<<<<< HEAD
+=======
+  display: flex; /* Usar flexbox para o cartão */
+  flex-direction: column; /* Alinhar os itens em coluna */
+  align-items: center; /* Centralizar o conteúdo do cartão */
+  width: 300px; /* Definir uma largura fixa para os cartões */
+  margin: 20px; /* Espaçamento entre os cartões */
+>>>>>>> 7582e54510095c95053fe3c359fa1e6b1f99046a
   background-color: #e1e1e1;
   width: 300px;
   padding: 20px;
   border-radius: 10px;
+<<<<<<< HEAD
+=======
+}
+
+.project-card img {
+  width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  max-height: 220px; /* Define uma altura máxima */
+  object-fit: contain; /* Ajusta a imagem para caber no contêiner sem cortar */
+  border-radius: 10px; /* Mantém o arredondamento dos cantos */
+}
+
+.project-card h3 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.project-card p {
+  margin: 10px 0;
+}
+
+.project-card a {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #1a1a1a; /* Cor de fundo preto mais fosco */
+  color: #fff; /* Cor do texto em branco */
+>>>>>>> 7582e54510095c95053fe3c359fa1e6b1f99046a
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+<<<<<<< HEAD
 .project-card
+=======
+footer a {
+  color: #fff; /* Cor dos links em branco */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  margin: 0 10px; /* Espaçamento entre os ícones */
+}
+
+footer a:hover {
+  color: #f0f0f0; /* Cor dos links ao passar o mouse */
+}
+>>>>>>> 7582e54510095c95053fe3c359fa1e6b1f99046a
